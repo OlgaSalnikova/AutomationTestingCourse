@@ -69,7 +69,7 @@ public class Task3 {
     @After
     public void tearDown()
     {
-        driver.quit();
+        driver.close();
     }
 
     private WebElement waitForElementPresentAndClick(By by, String error_message, long timeOutInSeconds)
