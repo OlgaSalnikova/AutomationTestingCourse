@@ -2,7 +2,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -25,7 +24,7 @@ public class Lesson4Task3 {
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("appPackage", "org.wikipedia");
         capabilities.setCapability("appActivity", ".main.MainActivity");
-        capabilities.setCapability("rotatable", true);
+        capabilities.setCapability("orientation", "PORTRAIT");
         capabilities.setCapability("app", "/Users/olgasalnikova/Desktop/mobileAutomationtestingCourse/GitHub/AutomationTestingCourse/Lesson4Task3/apks/org.wikipedia.apk");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
@@ -58,7 +57,7 @@ public class Lesson4Task3 {
                 15
         );
 
-        rotateToRight();
+        driver.rotate(ScreenOrientation.LANDSCAPE);
 
         swipeUpToFindElement(
                 By.xpath("//*[@text='View page in browser']"),
@@ -69,7 +68,7 @@ public class Lesson4Task3 {
 
     @Test
     public void checkIfMyListButtonIsClickableOnRotate(){
-        rotateToRight();
+        driver.rotate(ScreenOrientation.LANDSCAPE);
         waitForElementAndClick(
                 By.xpath("//android.widget.FrameLayout[@content-desc='My lists']"),
                 "Can not find navigation button to My List",
@@ -90,16 +89,6 @@ public class Lesson4Task3 {
         return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-    private void rotateToRight()
-    {
-        WebDriver augmentedDriver = new Augmenter().augment(driver);
-        ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
-    }
-
-    private String waitForElementAndGetAttribute(By by, String attribute, String error_message, long timeOutInSeconds) {
-        WebElement element = waitForElementPresent(by, error_message, timeOutInSeconds);
-        return element.getAttribute(attribute);
-    }
 
     private WebElement waitForElementAndClick(By by, String error_message, long timeOutInSeconds) {
         WebElement element = waitForElementPresent(by, error_message, timeOutInSeconds);
