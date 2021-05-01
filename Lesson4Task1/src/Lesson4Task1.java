@@ -40,6 +40,7 @@ public class Lesson4Task1 {
     @Test
     public void saveArticlesToMyList()
     {
+        //Save First Article
         String search_wikipedia_field = "//*[contains(@text,'Search Wikipedia')]";
         waitForElementAndClick
                 (
@@ -133,7 +134,7 @@ public class Lesson4Task1 {
                         5
                 );
 
-//Second Article
+        //Save First Article
 
         waitForElementAndClick
                 (
