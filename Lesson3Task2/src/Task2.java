@@ -24,7 +24,7 @@ public class Task2 {
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("appPackage", "org.wikipedia");
         capabilities.setCapability("appActivity", ".main.MainActivity");
-        capabilities.setCapability("app", "/Users/olgasalnikova/Desktop/mobileAutomationtestingCourse/GitHub/AutomationTestingCourse/Lesson3Task2/apks/org.wikipedia.apk");
+        capabilities.setCapability("app", "/Users/olgasalnikova/Desktop/MobileAutomationCourse/Lesson3Task2/apks/org.wikipedia.apk");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
