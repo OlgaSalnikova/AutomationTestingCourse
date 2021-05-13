@@ -15,6 +15,28 @@ import org.junit.Test;
 public class MyListsTests extends CoreTestCase {
 
     @Test
+    public void testSaveFirstArticleToMyList()
+    {
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Poland");
+        SearchPageObject.clickByArticleWithSubstring("Poland");
+
+        ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
+        ArticlePageObject.waitForArticleTitle();
+        String article_title = ArticlePageObject.getArticleTitle().trim();
+        ArticlePageObject.addArticleToMyList();
+        ArticlePageObject.closeArticle();
+
+        NavigationUI NavigationUI = NavigationUIFactory.get(driver);
+        NavigationUI.clickMyList();
+
+        MyListsPageObject MyListsPageObject = MyListsPageObjectFactory.get(driver);
+        MyListsPageObject.openFolderByName();
+        MyListsPageObject.swipeArticleToDelete(article_title);
+    }
+
+    @Test
     public void testSaveArticlesToMyList(){
 
         //Add first article
