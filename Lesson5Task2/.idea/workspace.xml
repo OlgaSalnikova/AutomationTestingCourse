@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0a18f30-70eb-4cb1-986f-e2537f1e5381" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_client_4_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/selenium_server_standalone_3_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson5Task2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apks/org.wikipedia.apk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/java-client-4.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/selenium-server-standalone-3.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/CoreTestCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/ui/MainPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/ui/NavigationUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/ArticleTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/MyListsTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/SearchTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Task3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson3Task2/out/production/Lesson3Task2/Task2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson3Task2/out/production/Lesson3Task2/Task2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson3Task2/src/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson3Task2/src/Task2.java" afterDir="false" />
+    <list default="true" id="d8d1133e-6978-4200-b8a3-0ca1ceafc4ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lesson5Task2/tests/SearchTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lesson5Task2/tests/SearchTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lesson5Task2/tests/Task3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SearchTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/Task3.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +18,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1s2Yp5XCmrjB057XLcrEqp433CE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,19 +26,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/tests" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/tests" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lib.ui" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Task3.checkWordsInSearchResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTests.testCheckByTitleAndDescription" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson5Task2" />
       <extension name="coverage">
         <pattern>
@@ -64,8 +45,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.Task3" />
-      <option name="METHOD_NAME" value="checkWordsInSearchResult" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
+      <option name="METHOD_NAME" value="testCheckByTitleAndDescription" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,18 +54,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Task3.checkWordsInSearchResult" />
+        <item itemvalue="JUnit.SearchTests.testCheckByTitleAndDescription" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a0a18f30-70eb-4cb1-986f-e2537f1e5381" name="Default Changelist" comment="" />
-      <created>1620072330289</created>
+      <changelist id="d8d1133e-6978-4200-b8a3-0ca1ceafc4ef" name="Default Changelist" comment="" />
+      <created>1621367286084</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1620072330289</updated>
+      <updated>1621367286084</updated>
     </task>
     <servers />
   </component>

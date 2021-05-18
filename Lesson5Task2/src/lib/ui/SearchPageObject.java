@@ -10,6 +10,7 @@ public class SearchPageObject extends MainPageObject{
             SEARCH_INPUT = "//*[contains(@text,'Search…')]",
             SEARCH_RESULT = "//*[@resource-id='org.wikipedia:id/search_results_list']//*[@resource-id='org.wikipedia:id/page_list_item_container'][2]",
             SEARCH_CANCEL_BUTTON = "org.wikipedia:id/search_close_btn",
+            SEARCH_BY_TITLE_AND_DESCRIPTION_TPL = "//*[@text='{DESCRIPTION}']/preceding-sibling::*[@text='{TITLE}']",
             SEARCH_RESULT_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']";
 
 
@@ -21,6 +22,10 @@ public class SearchPageObject extends MainPageObject{
     /* Template Methods */
     private static String getResultSearchElement(String substring){
         return SEARCH_RESULT_SUBSTRING_TPL.replace("{SUBSTRING}",substring);
+    }
+
+    private static String getDescriptionAndTitle(String title, String description){
+        return SEARCH_BY_TITLE_AND_DESCRIPTION_TPL.replace("{DESCRIPTION}",description).replace("{TITLE}",title);
     }
     /* Template Methods */
 
@@ -60,5 +65,9 @@ public class SearchPageObject extends MainPageObject{
     {
         String search_result_xpath = getResultSearchElement(substring);
         this.waitForElementAndClick(By.xpath(search_result_xpath), "Can not find and click search result with substring" + search_result_xpath,5);
+    }
+
+    public void waitForElementByTitleAndDescription(String title, String description){
+        this.waitForElementPresent(By.xpath(getDescriptionAndTitle(title, description)), "Cannot find element by title: " + title +  " and description: " + description,5);
     }
 }

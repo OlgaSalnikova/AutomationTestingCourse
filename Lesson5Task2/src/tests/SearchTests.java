@@ -16,4 +16,15 @@ public class SearchTests extends CoreTestCase {
         SearchPageObject.clickCancelSearchButton();
         SearchPageObject.waitForSearchResultToDisappear();
     }
+
+    @Test
+    public void testCheckByTitleAndDescription(){
+        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Sky");
+        SearchPageObject.waitForSearchResult();
+        SearchPageObject.waitForElementByTitleAndDescription("Sky", "Everything that is above the surface of the Earth");
+        SearchPageObject.waitForElementByTitleAndDescription("Skylab", "Space station launched and operated by NASA");
+        SearchPageObject.waitForElementByTitleAndDescription("Skyfall", "2012 James Bond film by Sam Mendes");
+    }
 }
