@@ -26,6 +26,20 @@ public class SearchTests extends CoreTestCase {
 
     @Test
     @Features(value = {@Feature(value="Search")})
+    @DisplayName("Initiate Search and check Cancel button")
+    @Description("Check Cancel button appear, clickable and disappear")
+    @Step("Staring testCancelSearch test")
+    @Severity(value = SeverityLevel.MINOR)
+    public void testCancelSearch() {
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
+        SearchPageObject.initSearchInput();
+        SearchPageObject.waitForCancelButtonToAppear();
+        SearchPageObject.clickCancelSearchButton();
+        SearchPageObject.waitForCancelButtonToDisappear();
+    }
+
+    @Test
+    @Features(value = {@Feature(value="Search")})
     @DisplayName("Check not empty search result")
     @Description("Initiate Search and check  not empty search result")
     @Step("Staring testAmountOfNotEmptySearch test")
